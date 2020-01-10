@@ -15,7 +15,7 @@ Use:
     
     
     require_once __DIR__ . '/src/Redtube.php';
-    $redtube = new Aethletic\Redtube\Redtube;
+    $redtube = new Aethletic\RedtubeApi\Redtube;
 
 #### Example
 ```php
