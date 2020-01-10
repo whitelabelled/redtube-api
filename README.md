@@ -2,6 +2,18 @@
 
 WORK IN PROGRESS
 
+### Requirements
+
+PHP >= 7.0
+
+### Install
+Clone or download:
+
+`$ git clone https://github.com/aethletic/redtube-api.git`
+
+Use:
+    
+    
     require_once __DIR__ . '/src/Redtube.php';
     $redtube = new Aethletic\Redtube\Redtube;
 
