@@ -1,4 +1,4 @@
-#### PHP API Wrapper for RedTube.com 🍌
+## PHP API Wrapper for RedTube.com 🍌
 
 WORK IN PROGRESS
 
