@@ -1,6 +1,6 @@
 <?php
 
-namespace Aethletic\Redtube;
+namespace Aethletic\RedtubeApi;
 
 class Redtube
 {
@@ -13,7 +13,6 @@ class Redtube
 
     /**
      * Get video by id.
-     *
      * @param  integer $id Video indetificator.
      * @param  string  $thumbsize Possible values are AVAILABLE_THUMB_FORMAT.
      * @param  string  $output Possible values are AVAILABLE_OUTPUT_TYPE.
@@ -43,9 +42,7 @@ class Redtube
             ]
         ), $output);
 
-        $videoUrl = self::getMp4($response['video']['embed_url']);
-
-        $response['video']['url_video'] = !is_array($videoUrl) ? $videoUrl : null;
+        $response['video']['url_video'] = !is_array($videoUrl = self::getMp4($response['video']['embed_url'])) ? $videoUrl : null;
 
         return $response;
     }
@@ -85,8 +82,11 @@ class Redtube
             return self::$errorMessage;
         }
 
-        return self::execute(self::BASE_API_URL . '?' . http_build_query(
-            array_merge(['data' => 'redtube.Videos.searchVideos'], $params)), $output
+        return self::execute(
+            self::BASE_API_URL . '?' . http_build_query(
+            array_merge(['data' => 'redtube.Videos.searchVideos'], $params)
+        ),
+            $output
         );
     }
 
@@ -104,7 +104,7 @@ class Redtube
             return self::$errorMessage;
         }
 
-        $html = file_get_contents($embedUrl);
+        $html = self::execute($embedUrl, null);
 
         preg_match_all('/"quality_480p":"(.+?)"/im', $html, $array);
 
@@ -164,9 +164,12 @@ class Redtube
     private static function execute($url, $output = self::DEFAULT_OUTPUT_TYPE)
     {
         $ch = curl_init();
+
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
         $response = ($output == 'json') ? json_decode(curl_exec($ch), true) : curl_exec($ch);
+
         curl_close($ch);
 
         return $response;
