@@ -4,17 +4,24 @@ WORK IN PROGRESS
 
 ### Requirements
 
-PHP >= 7.0
+PHP >= 5.4.x
 
 ### Install
+Composer:
+
+`$ composer require aethletic/redtube-api`
+
 Clone or download:
 
 `$ git clone https://github.com/aethletic/redtube-api.git`
 
 Use:
     
+    require_once __DIR__ . '/vendor/autoload.php';
     
-    require_once __DIR__ . '/src/Redtube.php';
+    // if download or clone
+    // require_once __DIR__ . '/src/Redtube.php';
+    
     $redtube = new Aethletic\RedtubeApi\Redtube;
 
 #### Example
