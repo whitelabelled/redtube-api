@@ -117,11 +117,3 @@ print_r($redtube::isVideoActive(123563));
 /* Get deleted videos */
 print_r($redtube::getDeletedVideos());
 ```
-#### Methods
-`getVideo($id = null, $thumbsize = 'all', $output = self::DEFAULT_OUTPUT_TYPE)`
-
-`getCategories($output = self::DEFAULT_OUTPUT_TYPE)`
-
-`search($params = [], $output = self::DEFAULT_OUTPUT_TYPE)`
-
-`getMp4($embedUrl = null, $output = self::DEFAULT_OUTPUT_TYPE)`
