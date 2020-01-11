@@ -1,6 +1,8 @@
 {
     "name": "aethletic/redtube-api",
     "description": "Redtube.com Simple API Wrapper (download video)",
+    "type": "library",
+    "minimum-stability": "master",
     "license": "MIT",
     "authors": [{
         "name": "aethletic",
