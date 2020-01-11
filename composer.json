@@ -1,7 +1,7 @@
 {
     "name": "aethletic/redtube-api",
     "description": "Redtube.com Simple API Wrapper (download video)",
-    "license": "FREE",
+    "license": "MIT",
     "authors": [{
         "name": "aethletic",
         "email": "hello@h3ro.ru"
