@@ -62,7 +62,7 @@ print_r($redtube::getStars()); // list of only names
 // output: xml
 print_r($redtube::getStars(false, 0, 'xml'));
 
-/* Get detailed list of actors (stars) */
+/* Get detailed list of actors (name, url, thumb (photo)) */
 print_r($redtube::getStars(true, 3));
 
 /* Video is active*/
