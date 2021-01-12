@@ -1,11 +1,11 @@
 {
-    "name": "aethletic/redtube-api",
+    "name": "chipslays/redtube-api",
     "description": "Redtube.com Simple API Wrapper (download video)",
     "type": "library",
     "license": "MIT",
     "authors": [{
-        "name": "aethletic",
-        "email": "hello@h3ro.ru"
+        "name": "chipslays",
+        "email": "hello@chipslays.ru"
     }],
     "require": {
         "php": ">=5.6.0"
