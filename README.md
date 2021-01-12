@@ -1,10 +1,6 @@
 ## PHP API Wrapper for RedTube.com 🍌
 
-### Requirements
-
-PHP >= 5.4.x
-
-### Install
+## Installation
 Composer:
 
 ```bash
@@ -26,7 +22,7 @@ Use:
     
     $redtube = new Aethletic\RedtubeApi\Redtube;
 
-#### Example
+## Examples
 ```php
 /*
     thumbsizes: 'medium','small','big','all','medium1','medium2' (default: all)
