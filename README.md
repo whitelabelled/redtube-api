@@ -7,11 +7,15 @@ PHP >= 5.4.x
 ### Install
 Composer:
 
-`$ composer require aethletic/redtube-api`
+```bash
+$ composer require chipslays/redtube-api
+```
 
 Clone or download:
 
-`$ git clone https://github.com/aethletic/redtube-api.git`
+```bash
+$ git clone https://github.com/chipslays/redtube-api.git
+```
 
 Use:
     
